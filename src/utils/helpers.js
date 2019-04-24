@@ -57,7 +57,9 @@ export function parseJSON(response) {
       }
 
       if (!response.ok) {
+        console.log('real response ', response);
         json = { errors: [{ status: response.status }] }
+        console.log('manipulated response ', json);
       }
 
       resolve({
